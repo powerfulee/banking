@@ -1,0 +1,107 @@
+{
+	"id": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+	"name": "bank",
+	"description": "",
+	"order": [
+		"85df9313-270a-3902-d654-7f11dc1a9067",
+		"24a7d720-1a1b-54e5-4317-af8337364194",
+		"269bda44-b139-86df-d9ee-9f8dccc888a2"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1534925983425,
+	"owner": "931559",
+	"public": false,
+	"requests": [
+		{
+			"id": "24a7d720-1a1b-54e5-4317-af8337364194",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://192.168.2.29:3000/api/product/list",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538022074349,
+			"name": "首页",
+			"description": "",
+			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+			"responses": [],
+			"rawModeData": "{\n\"page\":\"1\"\n}"
+		},
+		{
+			"id": "269bda44-b139-86df-d9ee-9f8dccc888a2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://192.168.2.29:3000/api/rotates/show",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+			"data": [],
+			"dataMode": "raw",
+			"name": "轮转图",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1538045405178,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"page\":\"1\"\n}"
+		},
+		{
+			"id": "85df9313-270a-3902-d654-7f11dc1a9067",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://192.168.2.29:3000/api/product/category",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538022066381,
+			"name": "类别列表",
+			"description": "",
+			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+			"responses": [],
+			"rawModeData": "{\n\"id\":\"7\"\n}"
+		}
+	]
+}
