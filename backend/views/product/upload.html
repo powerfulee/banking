@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <SCRIPT LANGUAGE="JavaScript">
+　　<!-- 
+　　function pick(symbol) {
+　　 if (window.opener && !window.opener.closed) 
+		var theJS = "<script>window.opener.document.bankForm.productPic.value='" + symbol + "';<\/script>";
+		
+		document.write(theJS);
+　　 	window.close(); 
+　　}
+　　// --> 
+　　</SCRIPT>
+</head>
+<body>
+	<form method="post" id="bankForm" enctype="multipart/form-data" action="/product/uploaded">
+	<div>
+    	<span>产品图片：</span>
+    	<span>
+    		<input type="file" name="icon" id="icon"/>
+    	</span>
+    </div>
+    <div>
+    	<input type="submit" value="提交"/>
+    </div>
+    <div>
+    	<a href="JavaScript:pick('<%=filePath%>')">
+    		<img src="<%=filePath%>"/>
+    	</a>
+    </div>
+	</form>
+</body>
+</html>

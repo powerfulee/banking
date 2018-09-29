@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title><%=title%></title>
+    <!-- Bootstrap 3.3.7 -->
+  	<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  	<!-- Font Awesome -->
+  	<link rel="stylesheet" href="/public/bower_components/font-awesome/css/font-awesome.min.css">
+  	<!-- Ionicons -->
+  	<link rel="stylesheet" href="/public/bower_components/Ionicons/css/ionicons.min.css">
+  	<!-- Theme style -->
+  	<link rel="stylesheet" href="/public/dist/css/AdminLTE.min.css">
+  	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  	<link rel="stylesheet" href="/public/dist/css/skins/_all-skins.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  	
+    <script src="/public/js/zepto.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+	    	$("#btnSubmit").on('click', function () {
+			    var category_name = $("#category_name").val();
+			    if (category_name == "" || category_name == null){
+			    	alert("请输入类别名称！");
+			    	$("#category_name").focus();
+			    }else{
+			    	$('form').submit();
+			    }
+			});
+		});
+    </script>
+</head>
+<body>
+<div class="box box-default">
+	<div class="box-header with-border">
+		<h3 class="box-title">类别新增</h3>
+		<div class="box-tools pull-right">
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+		</div>
+	</div>
+	<div class="box-body">
+		<form method="post" id="categoryForm" action="/category/insert">
+	    <div class="form-group">
+			<label>状态</label>
+		    <select class="form-control" name="category_status" id="category_status">
+		    	<option value=0 <%if (category[0].status==0){%>selected<%}%>>开放</option>
+		    	<option value=1 <%if (category[0].status==1){%>selected<%}%>>关闭</option>
+		    </select>	
+	    </div>
+	    <div class="form-group">
+			<label>序号</label>
+	    	<input type="text" class="form-control" name="navigation" id="navigation" value="<%=category[0].navigation%>"/>
+	    </div>
+	    <div class="form-group">
+			<label>名称</label>
+	    	<input type="text" class="form-control" name="category_name" id="category_name" value="<%=category[0].name%>"/>
+	    </div>
+	    <div class="box-footer">
+	    	<input type="hidden" id="category_id" name="category_id" value="<%=category[0].id%>">
+        	<button type="button" id="btnSubmit" class="btn btn-primary">提交</button>
+        </div>
+		</form>
+	</div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/public/dist/js/demo.js"></script>
+</body>
+</html>

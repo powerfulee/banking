@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title><%=title%></title>
+    <!-- Bootstrap 3.3.7 -->
+  	<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.css">
+  	<!-- Font Awesome -->
+  	<link rel="stylesheet" href="/public/bower_components/font-awesome/css/font-awesome.min.css">
+  	<!-- Ionicons -->
+  	<link rel="stylesheet" href="/public/bower_components/Ionicons/css/ionicons.min.css">
+  	<!-- Theme style -->
+  	<link rel="stylesheet" href="/public/dist/css/AdminLTE.min.css">
+  	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  	<link rel="stylesheet" href="/public/dist/css/skins/_all-skins.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <title><%=title%></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+    <!-- jQuery 3 -->
+    <script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="/public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/public/bower_components/bootstrap/dist/js/bootstrap-paginator.js"></script>
+</head>
+<body>
+<div class="box">
+	<div class="box-header">
+    	<h3 class="box-title">产品列表</h3>
+    	
+    	<div class="box-tools">
+    	  <div class="input-group input-group-sm" style="width: 150px;">
+    	    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+    	
+    	    <div class="input-group-btn">
+    	      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+    	    </div>
+    	  </div>
+    	</div>
+	</div>	
+	<table class="table table-hover">
+		<tr>
+			<th>类别名称</th>
+			<th>产品名称</th>
+			<th>图片</th>
+			<th>时间</th>
+			<th>状态</th>
+			<th>编辑</th>
+		</tr>
+		<%for( var i = 0; i < list.items.length; i++ ) {%>
+		<tr>
+			<td><%=list.items[i].category_name%></td>
+			<td><%=list.items[i].name%></td>
+			<td><img src='<%=list.items[i].icon%>' width='120' height='40'></img></td>
+			<td><%=momentFormat(list.items[i].create_date)%></td>
+			<td>
+				<%if (list.items[i].status == 0){%>
+					开放
+				<%}else{%>
+					关闭
+				<%}%>
+			</td>	
+			<td>
+				<a href="add/<%=list.items[i].id%>">修改</a>
+				|
+				<a href="delete/<%=list.items[i].id%>">删除</a>
+			</td>
+		</tr>
+		<%}%>
+	</table>	
+	
+	<div class="nav-box">
+		<ul id="p2" class="pagination"></ul>
+	</div>
+	
+	<script type="text/javascript">
+        var options = {
+        	bootstrapMajorVersion: 3,
+        	alignment: "left",
+            currentPage: "<%=list.currentPage%>",
+            totalPages: "<%=list.totalPages%>",
+            size: "large",
+            alignment: "center",
+            itemContainerClass: function (type, page, current) {
+                return (page === current) ? "active" : "pointer-cursor";  
+            },
+            onPageClicked: function(e,originalEvent,type,page){
+                 
+            },
+            onPageChanged: function(e,oldPage,newPage){
+                  
+            },
+            pageUrl:function(type,page,current){
+                return "/product/list?page="+page+"&limit=10";  
+            }
+        }
+  
+        $("#p2").bootstrapPaginator(options);
+    </script>
+</div>
+<!-- ./wrapper -->
+
+<!-- FastClick -->
+<script src="/public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/public/dist/js/demo.js"></script>
+</body>
+</html>

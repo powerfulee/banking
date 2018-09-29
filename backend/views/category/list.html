@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+<table class="table table-striped">
+	<tr>
+		<th>序号</th>
+		<th>类别名称</th>
+		<th>状态</th>
+		<th>更新日期</th>
+		<th>编辑</th>
+	</tr>
+	<%for( var i = 0; i < list.length; i++ ) {%>
+	<tr>
+		<td><%=list[i].navigation%></td>
+		<td><%=list[i].name%></td>
+		<td>
+			<%if (list[i].status == 0){%>
+			开放
+			<%}else{%>
+			关闭
+			<%}%>
+		</td>	
+		<td><%=momentFormat(list[i].create_date)%></td>
+		<td>
+			<a href="add/<%=list[i].id%>">修改</a>
+			|
+			<a href="delete/<%=list[i].id%>">删除</a>
+		</td>
+	</tr>
+	<%}%>
+</table>
+</body>
+</html>

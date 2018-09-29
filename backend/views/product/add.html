@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title><%=title%></title>
+    <!-- Bootstrap 3.3.7 -->
+  	<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  	<!-- Font Awesome -->
+  	<link rel="stylesheet" href="/public/bower_components/font-awesome/css/font-awesome.min.css">
+  	<!-- Ionicons -->
+  	<link rel="stylesheet" href="/public/bower_components/Ionicons/css/ionicons.min.css">
+  	<!-- Theme style -->
+  	<link rel="stylesheet" href="/public/dist/css/AdminLTE.min.css">
+  	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  	<link rel="stylesheet" href="/public/dist/css/skins/_all-skins.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <title><%=title%></title>
+</head>
+<body>
+<div class="box box-default">
+	<div class="box-header with-border">
+		<h3 class="box-title">产品新增</h3>
+		<div class="box-tools pull-right">
+			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+		</div>
+	</div>
+	<div class="box-body">
+	<form method="post" id="bankForm" name="bankForm" action="/product/insert">
+    <div>
+    	<label>状态</label>
+    	<select class="form-control" name="productStatus" id="productStatus">
+	    	<option value=0 <%if (product[0].status==0){%>selected<%}%>>开放</option>
+	    	<option value=1 <%if (product[0].status==1){%>selected<%}%>>关闭</option>
+	    </select>
+    </div>
+    <div>
+    	<label>类别</label>
+    	<select class="form-control" name="category_id" id="category_id">
+    		<%for( var i = 0; i < categories.length; i++ ) {%>
+    		<option value="<%=categories[i].id%>" <%if (product[0].category_id == categories[i].id){%>selected<%}%>>
+    			<%=categories[i].name%>
+    		</option>
+    		<%}%>
+    	</select>
+    </div>
+    <div>
+    	<label>产品名称</label>
+    	<input class="form-control" type="text" name="productName" id="productName" value="<%=product[0].name%>"/>
+    </div>
+    <div>
+    	<label>产品图片：</label>
+    	<input type="text" id="productPic" name="productPic" size="50" value="<%=product[0].icon%>"/>
+    	&nbsp;
+    	<input type="button" id="uploadBtn" name="uploadBtn" onClick="window.open ('/product/upload', '图片上传', 'height=300, width=500, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')" value="图片上传"/>
+    </div>
+    <div>
+    	<label>产品内容：</label>	
+    	<textarea class="form-control" name="content" id="content" rows="3"><%=product[0].description%></textarea>
+    </div>
+    <div class="box-footer">
+    	<input type="hidden" name="product_id" id="product_id" value="<%=product[0].id%>"/>
+    	<input class="btn btn-primary" type="submit" value="提交"/>
+    </div>
+	</form>
+	</div>
+</div>	
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="/public/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/public/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/public/dist/js/demo.js"></script>
+</body>
+</html>
