@@ -5,125 +5,17 @@
  Source Server Type    : MySQL
  Source Server Version : 50522
  Source Host           : 192.168.3.40:3306
- Source Schema         : homestead
+ Source Schema         : banking
 
  Target Server Type    : MySQL
  Target Server Version : 50522
  File Encoding         : 65001
 
- Date: 29/09/2018 17:29:10
+ Date: 30/09/2018 08:45:35
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for blog
--- ----------------------------
-DROP TABLE IF EXISTS `blog`;
-CREATE TABLE `blog`  (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `category_id` int(4) DEFAULT NULL,
-  `title` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `comment_total` int(4) DEFAULT 0,
-  `ip_address` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `status` int(4) DEFAULT 0,
-  `create_date` bigint(13) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `FKFEBA5C93FCBC1E60`(`category_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 274 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of blog
--- ----------------------------
-INSERT INTO `blog` VALUES (272, 1, 'testing1', '<p>testing1</p>\r\n', 0, '127.0.0.1', 0, 1294848000000);
-INSERT INTO `blog` VALUES (273, 4, 'testing2', '<p>testing2</p>\r\n', 0, NULL, 1, 1532919707);
-
--- ----------------------------
--- Table structure for category
--- ----------------------------
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category`  (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `category_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `status` int(2) DEFAULT NULL,
-  `create_date` bigint(13) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of category
--- ----------------------------
-INSERT INTO `category` VALUES (1, 'Reading', 0, 1520069455);
-INSERT INTO `category` VALUES (2, 'Feeling', 0, 1164601652);
-INSERT INTO `category` VALUES (3, 'Traveling', 0, 1164601652);
-INSERT INTO `category` VALUES (4, 'Working', 0, 1164601652);
-INSERT INTO `category` VALUES (5, 'Learning', 0, 1164601652);
-INSERT INTO `category` VALUES (6, 'Watching', 0, 1164601652);
-INSERT INTO `category` VALUES (7, 'Playing', 0, 1164601652);
-INSERT INTO `category` VALUES (8, 'Living', 0, 1164601652);
-INSERT INTO `category` VALUES (9, 'Listening', 1, 1164601652);
-INSERT INTO `category` VALUES (10, 'Codeing', 1, 1164601652);
-INSERT INTO `category` VALUES (12, 'Ending', 1, 1164601652);
-INSERT INTO `category` VALUES (15, 'teching', 0, 1520062659);
-
--- ----------------------------
--- Table structure for role
--- ----------------------------
-DROP TABLE IF EXISTS `role`;
-CREATE TABLE `role`  (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `role_name` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `create_date` bigint(13) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of role
--- ----------------------------
-INSERT INTO `role` VALUES (1, '超级管理员', 1491966079000);
-INSERT INTO `role` VALUES (17, '系统管理员', 1494558079667);
-
--- ----------------------------
--- Table structure for role_right
--- ----------------------------
-DROP TABLE IF EXISTS `role_right`;
-CREATE TABLE `role_right`  (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `role_id` int(4) DEFAULT NULL,
-  `menu_code` int(40) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 141 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of role_right
--- ----------------------------
-INSERT INTO `role_right` VALUES (116, 1, 10);
-INSERT INTO `role_right` VALUES (117, 1, 1001);
-INSERT INTO `role_right` VALUES (118, 1, 100101);
-INSERT INTO `role_right` VALUES (119, 1, 10010101);
-INSERT INTO `role_right` VALUES (120, 1, 10010102);
-INSERT INTO `role_right` VALUES (121, 1, 100102);
-INSERT INTO `role_right` VALUES (122, 1, 10010201);
-INSERT INTO `role_right` VALUES (123, 1, 10010202);
-INSERT INTO `role_right` VALUES (124, 1, 1002);
-INSERT INTO `role_right` VALUES (125, 1, 100202);
-INSERT INTO `role_right` VALUES (126, 1, 10020201);
-INSERT INTO `role_right` VALUES (127, 1, 10020202);
-INSERT INTO `role_right` VALUES (128, 1, 100203);
-INSERT INTO `role_right` VALUES (129, 1, 10020301);
-INSERT INTO `role_right` VALUES (130, 1, 10020302);
-INSERT INTO `role_right` VALUES (131, 1, 100201);
-INSERT INTO `role_right` VALUES (132, 1, 10020101);
-INSERT INTO `role_right` VALUES (133, 17, 100101);
-INSERT INTO `role_right` VALUES (134, 17, 10010101);
-INSERT INTO `role_right` VALUES (135, 17, 10010102);
-INSERT INTO `role_right` VALUES (136, 17, 100201);
-INSERT INTO `role_right` VALUES (137, 17, 10020101);
-INSERT INTO `role_right` VALUES (138, 17, 100203);
-INSERT INTO `role_right` VALUES (139, 17, 10020301);
-INSERT INTO `role_right` VALUES (140, 17, 10020302);
 
 -- ----------------------------
 -- Table structure for t_finance
@@ -201,28 +93,5 @@ CREATE TABLE `t_finance_category`  (
 INSERT INTO `t_finance_category` VALUES (7, '信用卡', '信用卡', '/pic/finance/20171106/1509955904180_gzip.png', 'https://www.baidu.com/', 3, 0, 1533266306799);
 INSERT INTO `t_finance_category` VALUES (8, '理财', '“理财”一词，最早见诸于20世纪90年代初期的报端。随着中国股票债券市场的扩容，商业银行、零售业务的日趋丰富和市民总体收入的逐年上升，“理财”概念逐渐走俏。个人理财（658）品种大致可以分为个人资产品', '/pic/finance/20171107/1510034887243_gzip.png', 'https://baike.baidu.com/item/%E7%90%86%E8%B4%A2/550678?fr=aladdin', 2, 0, 1533266312227);
 INSERT INTO `t_finance_category` VALUES (13, '借钱', '借贷', '/pic/finance/20171106/1509957309162_gzip.png', 'https://baike.baidu.com/item/%E5%80%9F%E8%B4%B7/79595?fr=aladdin', 1, 0, 1533265845917);
-
--- ----------------------------
--- Table structure for users
--- ----------------------------
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users`  (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `remember_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of users
--- ----------------------------
-INSERT INTO `users` VALUES (1, 'peterlee', 'peterlee@gmail.com', '$2y$10$UR3rvgVt7B3.gXhO2gjWs.OYQes0ewhUaA7jFkR.OUoGjuBEaiSf.', '7eW1HmlIBJa9etDEXhn3Ek9yWDuTVZLESAwMaWxdFB4Cqf2pYZWlrZECIKfH', '2018-04-02 14:51:37', '2018-04-02 14:51:37');
-INSERT INTO `users` VALUES (6, '李绿波1', '215025281@qq.com', '0000001', NULL, '2018-04-25 14:06:35', '2018-04-25 14:06:46');
-INSERT INTO `users` VALUES (7, '超级管理员1', '9143071691@qq.com', '00000011', NULL, '2018-04-26 08:42:00', '2018-04-26 08:42:08');
-INSERT INTO `users` VALUES (8, NULL, NULL, NULL, NULL, '2018-05-16 05:45:47', '2018-05-16 05:45:47');
 
 SET FOREIGN_KEY_CHECKS = 1;
