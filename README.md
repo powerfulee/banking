@@ -3,9 +3,12 @@
 ### 技术栈
 ~~~
 后端backend使用node.js+express+ejs
-前端frontend使用vue+mint-ui
-![image](http://github.com/powerfulee/banking/raw/master/public/images/demo/frontend.jpg)
 ~~~
+![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/backend.jpg)
+~~~
+前端frontend使用vue+mint-ui
+~~~
+![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/frontend.jpg)
 ### 开发环境
 ~~~
 node.js v6.10.1
