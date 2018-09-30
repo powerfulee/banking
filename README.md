@@ -17,7 +17,7 @@ mysql v5.6
 ~~~
 ### 项目配置
 ~~~
-后端数据库配置：backend/mysql.js
+后端数据库配置：backend/mysql.js，填写mysql服务器ip、用户名、密码、数据库名
 前端接口配置：frontend/src/config/Global.js，如果使用手机真机访问，请将localhost改为ip地址
 ~~~
 ### 项目启动步骤
