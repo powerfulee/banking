@@ -1,24 +1,28 @@
-ÒøĞĞÀí²Æ²úÆ·app
+é“¶è¡Œç†è´¢äº§å“app
 ===
-### ¼¼ÊõÕ»
+### æŠ€æœ¯æ ˆ
 ~~~
-ºó¶ËbackendÊ¹ÓÃnode.js+express+ejs
-Ç°¶ËfrontendÊ¹ÓÃvue+mint-ui
+åç«¯backendä½¿ç”¨node.js+express+ejs
 ~~~
-### ¿ª·¢»·¾³
+![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/backend.jpg)
+~~~
+å‰ç«¯frontendä½¿ç”¨vue+mint-ui
+~~~
+![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/frontend.jpg)
+### å¼€å‘ç¯å¢ƒ
 ~~~
 node.js v6.10.1
 vue v2.9.6
 mysql v5.6
 ~~~
-### ÏîÄ¿ÅäÖÃ
+### é¡¹ç›®é…ç½®
 ~~~
-ºó¶ËÊı¾İ¿âÅäÖÃ£ºbackend/mysql.js
-Ç°¶Ë½Ó¿ÚÅäÖÃ£ºfrontend/src/config/Global.js£¬Èç¹ûÊ¹ÓÃÊÖ»úÕæ»ú·ÃÎÊ£¬Çë½«localhost¸ÄÎªipµØÖ·
+åç«¯æ•°æ®åº“é…ç½®ï¼šbackend/mysql.js
+å‰ç«¯æ¥å£é…ç½®ï¼šfrontend/src/config/Global.jsï¼Œå¦‚æœä½¿ç”¨æ‰‹æœºçœŸæœºè®¿é—®ï¼Œè¯·å°†localhostæ”¹ä¸ºipåœ°å€
 ~~~
-### ÏîÄ¿Æô¶¯²½Öè
+### é¡¹ç›®å¯åŠ¨æ­¥éª¤
 ~~~
-1¡¢ĞÂ½¨bankingÊı¾İ¿â£¬Ö´ĞĞscriptÄ¿Â¼ÖĞbanking.sql½Å±¾µ¼ÈëÊı¾İ¡£
-2¡¢½øÈëbackendÄ¿Â¼£¬Ö´ĞĞnpm install»òcnpm install°²×°ÒÀÀµÄ£¿é£¬ĞŞ¸Äbackend/mysql.js±¾»úmysqlµØÖ·¡¢ÓÃ»§Ãû¡¢ÃÜÂë£¬È»ºóÖ´ĞĞnode ./bin/wwwÆô¶¯ºó¶ËÏîÄ¿£¬ä¯ÀÀÆ÷·ÃÎÊhttp://localhost:3000
-3¡¢½øÈëfrontendÄ¿Â¼£¬Ö´ĞĞnpm install»òcnpm install°²×°ÒÀÀµÄ£¿é£¬ĞŞ¸Äfrontend/src/config/Global.jsºó¶ËapiµØÖ·£¬È»ºócnpm run devÆô¶¯Ç°¶ËÏîÄ¿£¬ä¯ÀÀÆ÷·ÃÎÊhttp://localhost:8080£¬Îª»ñµÃ¸üºÃÌåÑéĞ§¹û£¬½¨ÒéÊ¹ÓÃchromeä¯ÀÀÆ÷²¢ÉèÎªÊÖ»úÄ£Ê½£¬»òÕßÊ¹ÓÃÊÖ»úÕæ»ú·ÃÎÊ¡£
+1ã€æ–°å»ºbankingæ•°æ®åº“ï¼Œæ‰§è¡Œscriptç›®å½•ä¸­banking.sqlè„šæœ¬å¯¼å…¥æ•°æ®ã€‚
+2ã€è¿›å…¥backendç›®å½•ï¼Œæ‰§è¡Œnpm installæˆ–cnpm installå®‰è£…ä¾èµ–æ¨¡å—ï¼Œä¿®æ”¹backend/mysql.jsæœ¬æœºmysqlåœ°å€ã€ç”¨æˆ·åã€å¯†ç ï¼Œç„¶åæ‰§è¡Œnode ./bin/wwwå¯åŠ¨åç«¯é¡¹ç›®ï¼Œæµè§ˆå™¨è®¿é—®http://localhost:3000
+3ã€è¿›å…¥frontendç›®å½•ï¼Œæ‰§è¡Œnpm installæˆ–cnpm installå®‰è£…ä¾èµ–æ¨¡å—ï¼Œä¿®æ”¹frontend/src/config/Global.jsåç«¯apiåœ°å€ï¼Œç„¶åcnpm run devå¯åŠ¨å‰ç«¯é¡¹ç›®ï¼Œæµè§ˆå™¨è®¿é—®http://localhost:8080ï¼Œä¸ºè·å¾—æ›´å¥½ä½“éªŒæ•ˆæœï¼Œå»ºè®®ä½¿ç”¨chromeæµè§ˆå™¨å¹¶è®¾ä¸ºæ‰‹æœºæ¨¡å¼ï¼Œæˆ–è€…ä½¿ç”¨æ‰‹æœºçœŸæœºè®¿é—®ã€‚
 ~~~
