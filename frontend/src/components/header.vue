@@ -18,6 +18,8 @@ import {
   swiperSlide
 } from 'vue-awesome-swiper'
 
+import '../config/Global'
+
 export default {
   components: {
     swiper,
@@ -44,7 +46,7 @@ export default {
         mousewheelControl: true,
         observeParents: true
       },
-      imgAddress: this.GLOBAL.serverAddress
+      imgAddress: serverAddress
     }
   },
   computed: {

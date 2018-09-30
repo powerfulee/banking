@@ -9,18 +9,11 @@ import 'swiper/dist/css/swiper.css'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
-import global_ from './config/Global'
-
 Vue.use(MintUI)
-/*
-import { TabContainer, TabContainerItem } from 'mint-ui';
-Vue.component(TabContainer.name, TabContainer);
-Vue.component(TabContainerItem.name, TabContainerItem);
-*/
+
 Vue.use(VueAwesomeSwiper)
 
 Vue.prototype.$api = api
-Vue.prototype.GLOBAL = global_
 Vue.config.productionTip = false
 Vue.config.devtools = true
 

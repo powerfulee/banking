@@ -1,5 +1,7 @@
 // 配置API接口地址
-var root = 'http://192.168.2.29:3000/api/'
+import '../config/Global'
+var root = serverAddress + '/api/'
+
 // 引用axios
 var axios = require('axios')
 // 自定义判断元素类型JS

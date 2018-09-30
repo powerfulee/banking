@@ -46,6 +46,7 @@ import axios from 'axios'
 import myHeader from '../components/header.vue'
 
 import first from "@/page/first";
+import '../config/Global.js'
 
 export default {
   name: 'page-tab-container',
@@ -60,7 +61,7 @@ export default {
       list3: [],
       list4: [],
       selected: "tab-container1",
-      imgAddress: this.GLOBAL.serverAddress
+      imgAddress: serverAddress
     };
   },
   created() {

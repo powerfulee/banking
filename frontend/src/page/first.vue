@@ -41,6 +41,8 @@ import {
   Loadmore
 } from 'mint-ui'
 
+import '../config/Global.js'
+
 export default {
   components: {
     myHeader,
@@ -59,29 +61,10 @@ export default {
       //wrapperHeight: 0,
       topStatus: '',
       bottomStatus: '',
-      imgAddress: this.GLOBAL.serverAddress
+      imgAddress: serverAddress
     }
   },
   created() {
-    /*
-    axios({
-      method: "post",
-      url: this.GLOBAL.serverAddress + '/api/product/list',
-      data: {
-        page: this.pageNo
-      },
-      transformRequest: [function(data) {
-        let ret = ''
-        for (let it in data) {
-          ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
-        }
-        return ret
-      }],
-    }).then((res) => {
-      this.totalPage = res.data.totalPage
-      this.list = res.data.data
-    })
-    */
     let data = {
       page: this.pageNo
     }
