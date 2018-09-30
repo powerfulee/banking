@@ -1,20 +1,20 @@
 {
-	"id": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+	"id": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
 	"name": "bank",
 	"description": "",
 	"order": [
-		"85df9313-270a-3902-d654-7f11dc1a9067",
-		"24a7d720-1a1b-54e5-4317-af8337364194",
-		"269bda44-b139-86df-d9ee-9f8dccc888a2"
+		"e10707bd-33af-c9ab-c538-c67711c3b0ae",
+		"522604ff-6945-251b-b0ce-e98920df7de1",
+		"1edf5116-cf28-9a33-2c1a-95fe4787caff"
 	],
 	"folders": [],
 	"folders_order": [],
-	"timestamp": 1534925983425,
+	"timestamp": 0,
 	"owner": "931559",
 	"public": false,
 	"requests": [
 		{
-			"id": "24a7d720-1a1b-54e5-4317-af8337364194",
+			"id": "1edf5116-cf28-9a33-2c1a-95fe4787caff",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
@@ -24,67 +24,70 @@
 					"enabled": true
 				}
 			],
-			"url": "http://192.168.2.29:3000/api/product/list",
+			"url": "http://localhost:3000/api/product/category",
 			"queryParams": [],
-			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
+			"preRequestScript": null,
 			"method": "POST",
+			"collectionId": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
 			"data": [],
 			"dataMode": "raw",
+			"name": "类别列表",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1538270215154,
+			"version": 2,
+			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1538022074349,
-			"name": "首页",
-			"description": "",
-			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
-			"responses": [],
-			"rawModeData": "{\n\"page\":\"1\"\n}"
+			"rawModeData": "{\n\"id\":\"7\"\n}"
 		},
 		{
-			"id": "269bda44-b139-86df-d9ee-9f8dccc888a2",
+			"id": "522604ff-6945-251b-b0ce-e98920df7de1",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/json",
-					"description": "",
-					"enabled": true
+					"enabled": true,
+					"description": ""
 				}
 			],
-			"url": "http://192.168.2.29:3000/api/rotates/show",
+			"url": "http://localhost:3000/api/rotates/show",
 			"queryParams": [],
 			"pathVariables": {},
 			"pathVariableData": [],
 			"preRequestScript": null,
 			"method": "POST",
-			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
 			"data": [],
 			"dataMode": "raw",
 			"name": "轮转图",
-			"description": "",
 			"descriptionFormat": "html",
-			"time": 1538045405178,
-			"version": 2,
-			"responses": [],
 			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n\t\"page\":\"1\"\n}"
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n  \"page\":\"1\"\n}",
+			"folder": null,
+			"auth": null,
+			"responses": [],
+			"collectionId": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
+			"events": null,
+			"description": null,
+			"variables": null
 		},
 		{
-			"id": "85df9313-270a-3902-d654-7f11dc1a9067",
+			"id": "e10707bd-33af-c9ab-c538-c67711c3b0ae",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/json",
-					"description": "",
 					"enabled": true
 				}
 			],
-			"url": "http://192.168.2.29:3000/api/product/category",
+			"url": "http://localhost:3000/api/product/list",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -92,16 +95,19 @@
 			"method": "POST",
 			"data": [],
 			"dataMode": "raw",
-			"version": 2,
 			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1538022066381,
-			"name": "类别列表",
-			"description": "",
-			"collectionId": "6d9b1b5d-4a8a-a577-11dd-bb0167a76d68",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"name": "首页",
+			"rawModeData": "{\n\"page\":\"1\"\n}",
+			"folder": null,
+			"auth": null,
 			"responses": [],
-			"rawModeData": "{\n\"id\":\"7\"\n}"
+			"collectionId": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
+			"events": null,
+			"descriptionFormat": null,
+			"description": null,
+			"variables": null
 		}
 	]
 }
