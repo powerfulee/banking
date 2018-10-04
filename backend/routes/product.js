@@ -8,23 +8,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var formidable = require('formidable');
 var fs = require("fs");
 
-/*
-router.get("/list", function(req, res){
-    var sql = 'select a.id,b.name as category_name,a.name,a.icon,a.description,a.link_url,a.status,a.create_date from t_finance as a left join t_finance_category as b on a.category_id=b.id order by a.id desc';
-	
-	var page = req.query.page;
-	var limit = req.query.limit;
-	var data = {currentPage:page,totalPages:0};
-	
-	connection.query(sql,function(error,result){
-		//console.log(result);
-		res.render('product/list', {
-	        title: '产品列表',
-	        list: result
-    	});
-	});
-})
-*/
 router.get("/list", function(req, res){
     var sql = 'select a.id,b.name as category_name,a.name,a.icon,a.description,a.link_url,a.status,a.create_date from t_finance as a left join t_finance_category as b on a.category_id=b.id order by a.id desc';
 	
