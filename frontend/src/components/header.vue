@@ -65,7 +65,7 @@ export default {
       let params = {
         page: '1'
       }
-      this.$api.post('rotates/show', params, r => {
+      this.$api.post('rotates/list', params, r => {
         this.items = r.data
       })
     }
