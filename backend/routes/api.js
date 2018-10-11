@@ -36,7 +36,7 @@ app.post('/product/list', function(req, res) {
 	});
 });
 
-app.post('/rotates/show', function(req, res) {
+app.post('/rotates/list', function(req, res) {
 	var start = req.body.page;
 	var sql = 'select id,name,pic_url,link_url from t_finance_banner limit ?,10';
 	var sql_params = (start-1)*10;
