@@ -51,31 +51,28 @@
 				{
 					"key": "Content-Type",
 					"value": "application/json",
-					"enabled": true,
-					"description": ""
+					"description": "",
+					"enabled": true
 				}
 			],
-			"url": "http://localhost:3000/api/rotates/show",
+			"url": "http://localhost:3000/api/rotates/list",
+			"folder": null,
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "POST",
 			"data": [],
 			"dataMode": "raw",
-			"name": "轮转图",
-			"descriptionFormat": "html",
 			"tests": null,
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n  \"page\":\"1\"\n}",
-			"folder": null,
-			"auth": null,
-			"responses": [],
-			"collectionId": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
-			"events": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539224693449,
+			"name": "轮转图",
 			"description": null,
-			"variables": null
+			"collectionId": "ad40f04e-a689-a6e8-15b8-2c08f8194bd3",
+			"responses": [],
+			"rawModeData": "{\n  \"page\":\"1\"\n}"
 		},
 		{
 			"id": "e10707bd-33af-c9ab-c538-c67711c3b0ae",
