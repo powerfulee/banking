@@ -26,3 +26,9 @@ mysql v5.6
 2、进入backend目录，执行npm install或cnpm install安装依赖模块，修改backend/mysql.js本机mysql地址、用户名、密码，然后执行node ./bin/www启动后端项目，浏览器访问http://localhost:3000
 3、进入frontend目录，执行npm install或cnpm install安装依赖模块，修改frontend/src/config/Global.js后端api地址，然后cnpm run dev启动前端项目，浏览器访问http://localhost:8080，为获得更好体验效果，建议使用chrome浏览器并设为手机模式，或者使用手机真机访问。
 ~~~
+###	接口测试
+~~~
+![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/postman.jpg)
+1、开启Postman（需在chrome中安装Postman插件）
+2、导入script目录中的bank.postman_collection.json数据
+3、可对前端所需要的首页、列表、轮转图三个接口进行测试
