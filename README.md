@@ -2,7 +2,7 @@
 ===
 ### 技术栈
 ~~~
-后端backend使用node.js+express+ejs
+后端backend使用node.js+express+ejs.
 ~~~
 ![image](https://github.com/powerfulee/banking/raw/master/public/images/demo/backend.jpg)
 ~~~
